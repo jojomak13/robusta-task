@@ -1,0 +1,648 @@
+{
+	"info": {
+		"_postman_id": "0764d98c-b617-4b5d-a8c1-cf4c82ad5d56",
+		"name": "Robusta-Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5330254"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jojo@test.com\",\n    \"password\": \"password\",\n    \"device_name\": \"Galaxy A32\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"jojo@test.com\",\n    \"password\": \"password\",\n    \"device_name\": \"Galaxy A32\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/auth/login",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Mar 2023 10:31:37 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Mar 2023 10:31:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"2|qctk8cZh9VxsYszbiiuVJhWBNBx2tdjHWnwrS4Fa\",\n    \"data\": {\n        \"id\": 11,\n        \"name\": \"Joseph\",\n        \"email\": \"jojo@test.com\",\n        \"email_verified_at\": \"2023-03-07T10:05:48.000000Z\",\n        \"created_at\": \"2023-03-07T10:05:48.000000Z\",\n        \"updated_at\": \"2023-03-07T10:05:48.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "lXw2R4hD0REGpnAUZwvYGWLXkfBcUd7nUQEdgLFP",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jojo@test.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/logout",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Logout",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"jojo@test.com\",\n    \"password\": \"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/auth/logout",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Mar 2023 10:31:26 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Mar 2023 10:31:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Logout successfully.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Trips",
+			"item": [
+				{
+					"name": "List Trips",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "cGphbSGpGH6LpZKjUSBzmRpdX8eDQWqXFBkJqWRp",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips?from=2&to=4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2",
+									"description": "Fayyum"
+								},
+								{
+									"key": "to",
+									"value": "4",
+									"description": "Asyut"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Trips",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/trips?from=2&to=4",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"trips"
+									],
+									"query": [
+										{
+											"key": "from",
+											"value": "2",
+											"description": "Fayyum"
+										},
+										{
+											"key": "to",
+											"value": "4",
+											"description": "Asyut"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Mar 2023 19:00:20 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Mar 2023 19:00:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"98a1e64b-811e-4fa3-b969-ebcbcb58ef72\",\n            \"bus_number\": \"5759\",\n            \"route_name\": \"Giza Route\",\n            \"moves_at\": \"2023-03-09 15:45:23\"\n        },\n        {\n            \"id\": \"98a1e64b-84ad-4a7c-856b-bbc5829ced44\",\n            \"bus_number\": \"7385\",\n            \"route_name\": \"Giza Route\",\n            \"moves_at\": \"2023-03-08 02:37:53\"\n        },\n        {\n            \"id\": \"98a1e64b-88db-4394-97d6-83940f4e6de2\",\n            \"bus_number\": \"7385\",\n            \"route_name\": \"Giza Route\",\n            \"moves_at\": \"2023-03-10 06:08:19\"\n        },\n        {\n            \"id\": \"98a1e64b-8be8-4037-a9dd-35bc6383b130\",\n            \"bus_number\": \"5759\",\n            \"route_name\": \"Giza Route\",\n            \"moves_at\": \"2023-03-10 13:01:49\"\n        },\n        {\n            \"id\": \"98a1e64b-8e44-4270-9ec8-d62cfafe7c64\",\n            \"bus_number\": \"1265\",\n            \"route_name\": \"Giza Route\",\n            \"moves_at\": \"2023-03-09 05:25:38\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Show Trip",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/98a1e64b-811e-4fa3-b969-ebcbcb58ef72?from=1&to=4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"98a1e64b-811e-4fa3-b969-ebcbcb58ef72"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "1"
+								},
+								{
+									"key": "to",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Show Trip",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/trips/98a1e64b-811e-4fa3-b969-ebcbcb58ef72?from=1&to=4",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"trips",
+										"98a1e64b-811e-4fa3-b969-ebcbcb58ef72"
+									],
+									"query": [
+										{
+											"key": "from",
+											"value": "1"
+										},
+										{
+											"key": "to",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Mar 2023 18:55:47 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Mar 2023 18:55:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"trip\": {\n        \"id\": \"98a1e64b-811e-4fa3-b969-ebcbcb58ef72\",\n        \"route_name\": \"Giza Route\",\n        \"moves_at\": \"2023-03-09 15:45:23\"\n    },\n    \"seats\": [\n        {\n            \"id\": 21,\n            \"seat_number\": \"869\",\n            \"available\": false\n        },\n        {\n            \"id\": 22,\n            \"seat_number\": \"451\",\n            \"available\": false\n        },\n        {\n            \"id\": 23,\n            \"seat_number\": \"464\",\n            \"available\": true\n        },\n        {\n            \"id\": 24,\n            \"seat_number\": \"912\",\n            \"available\": true\n        },\n        {\n            \"id\": 25,\n            \"seat_number\": \"506\",\n            \"available\": true\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "New Ticket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "TrekbaglYqpBVCc822sgO4Qlnxp30rSpC4c31Ymz",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"from\": 1,\n    \"to\": 4,\n    \"seat_id\": 23\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/trips/98a1e64b-811e-4fa3-b969-ebcbcb58ef72",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"98a1e64b-811e-4fa3-b969-ebcbcb58ef72"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Ticket",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"from\": 1,\n    \"to\": 4,\n    \"seat_id\": 23\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/trips/98a1e64b-811e-4fa3-b969-ebcbcb58ef72",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"trips",
+										"98a1e64b-811e-4fa3-b969-ebcbcb58ef72"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Mar 2023 19:57:10 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Mar 2023 19:57:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Ticket Created successfully.\",\n    \"ticket\": {\n        \"user_id\": 11,\n        \"seat_id\": 23,\n        \"trip_id\": \"98a1e64b-811e-4fa3-b969-ebcbcb58ef72\",\n        \"start_station\": 1,\n        \"stations\": [\n            1,\n            2,\n            3,\n            4\n        ],\n        \"end_station\": 4,\n        \"price\": 50,\n        \"id\": \"98a214e9-edf7-49a9-a3e6-741227acdd36\",\n        \"updated_at\": \"2023-03-07T19:57:09.000000Z\",\n        \"created_at\": \"2023-03-07T19:57:09.000000Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:8000/api",
+			"type": "string"
+		}
+	]
+}
